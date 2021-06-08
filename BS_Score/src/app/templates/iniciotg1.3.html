@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Estilo Incorporado </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static\bootstrap.css">
+</head>
+
+<body style="background-color: rgb(146, 162, 204);">
+
+    <h1>BS Score</h1>
+
+    <p>
+        Bem vindo ao preditor do BS Score! <br> Favor iniciar informando o nome do degustador e o lote a ser avaliado!!
+    </p><br>
+
+    <form action="{{url_for('adc')}}" method="post">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lote">Lote</label>
+                <td>
+                    <th>
+                        <input type="text" class="form-control" id="lote" name="lote" value="" required>
+                    </th>
+                </td>
+            </div><br><br>
+
+            <div class="form-group">
+
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+                <label for="comentario1">Comentário:</label>
+
+                <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" id="comentario1" name="comentario1">
+                            <td>
+                                <th>
+                                    {% for k in lt %}
+                                    <option >{{k}}</option>
+                                    {% endfor %}
+                                </th>
+                            </td>
+        
+                        </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+                <label for="comentario1">Intensidade:</label>
+
+                <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" id="intensidade1" name="intensidade1">
+                            <td>
+                                
+                                    {% for bom in bom3 %}
+                                    <option value="3">{{bom}}</option>
+                                    {% endfor %}
+
+                                    {% for médio in medio2 %}
+                                    <option value="2">{{médio}}</option>
+                                    {% endfor %}
+
+                                    {% for ruim in ruim1 %}
+                                    <option value="1">{{ruim}}</option>
+                                    {% endfor %}
+        
+                                
+                            </td>
+                            
+                        </select>
+            </div>
+
+
+
+            <!--============ fim c1 =============-->
+
+            <div class="form-group"></div><br><br>
+            <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+            <label for="comentario2">Comentário:</label>
+
+            <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" id="comentario2" name="comentario2">
+                            <td>
+                                
+                                    {% for k in lt %}
+                                    <option >{{k}}</option>
+                                    {% endfor %}
+
+                               
+                            </td>
+                    </select>
+
+
+            <div class="form-group"><br>
+
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+                <label for="comentario2">Intensidade:</label>
+
+                <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" id="intensidade2" name="intensidade2">
+                                <td>
+                                    
+                                        {% for bom in bom3 %}
+                                        <option value="3">{{bom}}</option>
+                                        {% endfor %}
+
+                                        {% for médio in medio2 %}
+                                        <option value="2">{{médio}}</option>
+                                        {% endfor %}
+
+                                        {% for ruim in ruim1 %}
+                                        <option value="1">{{ruim}}</option>
+                                        {% endfor %}
+                                    
+                                </td>
+                            </select>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <!--============ fim c2 =============--><br><br><br><br><br><br><br><br><br>
+            <p></p>
+            <div class="form-group">
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+                <label for="comentario3">Comentário:</label>
+
+                <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" id="comentario3" name="comentario3">
+                            <td>
+                                <th>       
+                                    {% for k in lt %}
+                                    <option >{{k}}</option>
+                                    {% endfor %}
+
+                                </td>
+                            </th>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+                <label for="comentario3">Intensidade:</label>
+
+                <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" id="intensidade3" name="intensidade3">
+                            {% for bom in bom3 %}
+                            <option value="3">{{bom}}</option>
+                            {% endfor %}
+
+                            {% for médio in medio2 %}
+                            <option value="2">{{médio}}</option>
+                            {% endfor %}
+
+                            {% for ruim in ruim1 %}
+                            <option value="1">{{ruim}}</option>
+                            {% endfor %}
+                        </select>
+            </div>
+            <!--============ fim c3 =============-->
+            <div class="form-group"><br><br>
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+                <label for="comentario4">Comentário:</label>
+
+                <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" id="comentario4" name="comentario4">
+                                    
+                                {% for k in lt %}
+                                <option >{{k}}</option>
+                                {% endfor %}
+
+
+                        </select>
+            </div>
+
+            <div class="form-group">
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+                <label for="comentario4">Intensidade:</label>
+
+                <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" id="intensidade4" name="intensidade4">
+                            {% for bom in bom3 %}
+                            <option value="3">{{bom}}</option>
+                            {% endfor %}
+
+                            {% for médio in medio2 %}
+                            <option value="2">{{médio}}</option>
+                            {% endfor %}
+
+                            {% for ruim in ruim1 %}
+                            <option value="1">{{ruim}}</option>
+                            {% endfor %}
+                        </select>
+            </div>
+        </div>
+
+        <!--============ fim c4 =============--><br><br><br><br><br><br><br><br><br>
+        <p></p>
+        <div class="col-md-3">
+
+            <div class="form-group">
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+                <label for="comentario5">Comentário:</label>
+
+                <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" id="comentario5" name="comentario5">
+                                
+                            {% for k in lt %}
+                            <option >{{k}}</option>
+                            {% endfor %}
+
+
+                        </select>
+            </div>
+
+            <div class=" form-group ">
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css " rel="stylesheet ">
+                <link rel="stylesheet " href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css " />
+                <label for="comentario5 ">Intensidade:</label>
+
+                <select class="form-control selectpicker " data-show-subtext="true " data-live-search="true " id="intensidade5" name="intensidade5">
+                            {% for bom in bom3 %}
+                            <option value="3">{{bom}}</option>
+                            {% endfor %}
+
+                            {% for médio in medio2 %}
+                            <option value="2">{{médio}}</option>
+                            {% endfor %}
+
+                            {% for ruim in ruim1 %}
+                            <option value="1">{{ruim}}</option>
+                            {% endfor %}
+                        </select>
+            </div>
+            <!--============ fim c5 =============-->
+
+            <div class="form-group "><br><br>
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css " rel="stylesheet ">
+                <link rel="stylesheet " href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css " />
+                <label for="comentario6">Comentário:</label>
+
+                <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true " id="comentario6" name="comentario6">
+                                
+                            {% for k in lt %}
+                            <option >{{k}}</option>
+                            {% endfor %}
+
+
+                        </select>
+            </div>
+            <div class="form-group ">
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css " rel="stylesheet ">
+                <link rel="stylesheet " href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css " />
+                <label for="comentario3 ">Intensidade:</label>
+
+                <select class="form-control selectpicker " data-show-subtext="true " data-live-search="true " id="intensidade6" name="intensidade6">
+                            {% for bom in bom3 %}
+                            <option value="3">{{bom}}</option>
+                            {% endfor %}
+
+                            {% for médio in medio2 %}
+                            <option value="2">{{médio}}</option>
+                            {% endfor %}
+
+                            {% for ruim in ruim1 %}
+                            <option value="1">{{ruim}}</option>
+                            {% endfor %}
+                        </select>
+            </div>
+        </div>
+        <script>
+            $(function() {
+                $('.selectpicker').selectpicker();
+            });
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js "></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js "></script>
+        </div>
+        </div>
+
+
+        <div class="form-group ">
+            <td>
+                <th>
+                    <button type="submit" style="margin-top: 30px; margin-left: 490px; margin-right: 754px; " class="btn btn-primary">enviar</button>
+                </th>
+            </td>
+
+        </div>
+    </form>
+
+
+
+
+</body>
+
+</html>
+
+</html>
